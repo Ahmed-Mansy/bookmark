@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="project-1.jpg">
+    <title>Bookmark</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="container py-5">
+            <h3>
+                Bookmarker
+            </h3>
+        </div>
+    </header>
+
+    <section class="inputs">
+        <div class="container">
+            <div class="check">
+
+                <div class="flex-column">
+
+                    <h2>Bookmark your favorite sites</h2>
+                    <p>Site Name</p>
+                    <input id="siteName" placeholder="Bookmark Name" type="text">
+                    <p class="alert alert-error m-auto my-2" style="display: block;" id="nameError">Name is required</p>
+                    <p class="pt-3">Site URL</p>
+
+                    <input id="siteUrl" placeholder="website URL" type="text">
+
+                    <p class="alert alert-error m-auto my-2" style="display: block;" id="urlError">Url Field is required
+                    </p>
+                    <div class="m-auto py-4">
+                        <button class="btn btn-primary" onclick="submit()">Submit</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <section class="out">
+
+        <div class="container">
+            <div id="bookmarkList" class="sites-list flex-column"> 
+                
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2019 Bookmarker Inc.</p>
+        </div>
+    </footer>
+
+    <script src="JS/main.js"></script>
+</body>
+
+</html>
