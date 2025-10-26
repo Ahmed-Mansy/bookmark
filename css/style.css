@@ -1,90 +1,246 @@
-* {
-    font-family: arial;
-}
-.container {
-    width: 80%;
-    margin: 15px auto;
-    padding: 0px 15px;
-}
-input {
-    width: 80%;
-    font-size: 15px;
-    max-height: 2em;
-    border-radius: 5px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgb(221, 221, 221);
-    border-image: initial;
-    padding: 5px;
-    margin: auto;
-}
-input:hover {
-    box-shadow: rgb(136, 136, 136) 0px 0px 12px -7px;
-}
+   :root {
+       --gradient-start: #667eea;
+       --gradient-end: #764ba2;
+   }
 
-.alert {
-    padding: 5px;
-    margin: 10px;
-    width: 80%;
-    font-size: 18px;
-    border-radius: 5px;
-    text-align: center;
-}
-.alert-error {
-    background-color: #ffb2b2;
-    color: #6d0000;
-    border: 1px solid #6d0000;
-}
+   body {
+       background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+       min-height: 100vh;
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   }
 
-p {
-    font-weight: bold;
-    color: rgb(51, 51, 51);
-}
-header .container {
-    color: rgb(170, 170, 170);
-    font-size: 25px;
-    padding: 20px;
-    border-bottom: 1px solid rgb(153, 153, 153);
-}
-.check
-{
-    background-color: rgb(238, 238, 238);
-    text-align: center;
-    border-width: initial;
-    border-style: none;
-    border-color: initial;
-    border-image: initial;
-    padding: 30px;
-}
+   .header-section {
+       text-align: center;
+       color: white;
+       padding: 3rem 0 2rem;
+       animation: fadeInDown 0.6s ease;
+   }
 
-.webwell {
-    background-image: linear-gradient(#EEE,#FFF);
-    margin: 10px 0;
-    padding: 20px;
-}
+   .header-section h1 {
+       font-size: 3rem;
+       font-weight: 700;
+       margin-bottom: 0.5rem;
+       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+   }
 
-.webwell h2 {
-    width: 30%;
-    color: #333;
-    margin: auto 0;
-}
+   .header-section p {
+       font-size: 1.1rem;
+       opacity: 0.9;
+   }
 
-.btn {
-    padding: 10px 15px;
-    font-size: 15px;
-    margin: 15px 5px;
-    cursor: pointer;
-    border-radius: 5px;
-    max-width: fit-content;
-}
+   .input-card {
+       background: white;
+       border-radius: 20px;
+       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+       animation: fadeInUp 0.6s ease;
+   }
 
+   .form-label {
+       font-weight: 600;
+       color: #333;
+       margin-bottom: 0.5rem;
+   }
 
+   .form-control {
+       border: 2px solid #e0e0e0;
+       border-radius: 10px;
+       padding: 0.875rem 1.125rem;
+       transition: all 0.3s ease;
+   }
 
-footer .container {
-    padding: 20px;
-    border-top: 1px solid #999;
-    font-size: 14px;
-}
-footer p {
-    color: #AAA;
-}
+   .form-control:focus {
+       border-color: var(--gradient-start);
+       box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.1);
+   }
+
+   .error-message {
+       color: #e74c3c;
+       font-size: 0.85rem;
+       margin-top: 0.25rem;
+       display: none;
+       animation: shake 0.4s ease;
+   }
+
+   .error-message.show {
+       display: block;
+   }
+
+   .btn-submit {
+       background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+       color: white;
+       border: none;
+       border-radius: 10px;
+       padding: 1rem;
+       font-weight: 600;
+       box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+       transition: all 0.3s ease;
+   }
+
+   .btn-submit:hover {
+       transform: translateY(-2px);
+       box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+   }
+
+   .bookmark-card {
+       background: white;
+       border-radius: 15px;
+       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+       transition: all 0.3s ease;
+       animation: slideIn 0.4s ease;
+       margin-bottom: 1.25rem;
+   }
+
+   .bookmark-card:hover {
+       transform: translateY(-5px);
+       box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+   }
+
+   .bookmark-name {
+       font-size: 1.3rem;
+       font-weight: 600;
+       color: #333;
+       margin-bottom: 0.25rem;
+   }
+
+   .bookmark-url {
+       color: #888;
+       font-size: 0.9rem;
+       word-break: break-all;
+   }
+
+   .btn-visit {
+       background: var(--gradient-start);
+       color: white;
+       border: none;
+       border-radius: 8px;
+       padding: 0.625rem 1.25rem;
+       font-weight: 600;
+       transition: all 0.3s ease;
+   }
+
+   .btn-visit:hover {
+       background: #5568d3;
+       transform: scale(1.05);
+       color: white;
+   }
+
+   .btn-delete {
+       background: #e74c3c;
+       color: white;
+       border: none;
+       border-radius: 8px;
+       padding: 0.625rem 1.25rem;
+       font-weight: 600;
+       transition: all 0.3s ease;
+   }
+
+   .btn-delete:hover {
+       background: #c0392b;
+       transform: scale(1.05);
+       color: white;
+   }
+
+   .empty-state {
+       text-align: center;
+       color: white;
+       padding: 4rem 1.25rem;
+       animation: fadeIn 0.6s ease;
+   }
+
+   .empty-state svg {
+       width: 100px;
+       height: 100px;
+       margin-bottom: 1.25rem;
+       opacity: 0.7;
+   }
+
+   .empty-state h3 {
+       font-size: 1.5rem;
+       margin-bottom: 0.625rem;
+   }
+
+   footer {
+       text-align: center;
+       color: white;
+       margin-top: 2.5rem;
+       padding-bottom: 1.25rem;
+       opacity: 0.8;
+       font-size: 0.9rem;
+   }
+
+   @keyframes fadeInDown {
+       from {
+           opacity: 0;
+           transform: translateY(-20px);
+       }
+
+       to {
+           opacity: 1;
+           transform: translateY(0);
+       }
+   }
+
+   @keyframes fadeInUp {
+       from {
+           opacity: 0;
+           transform: translateY(20px);
+       }
+
+       to {
+           opacity: 1;
+           transform: translateY(0);
+       }
+   }
+
+   @keyframes fadeIn {
+       from {
+           opacity: 0;
+       }
+
+       to {
+           opacity: 1;
+       }
+   }
+
+   @keyframes slideIn {
+       from {
+           opacity: 0;
+           transform: translateX(-20px);
+       }
+
+       to {
+           opacity: 1;
+           transform: translateX(0);
+       }
+   }
+
+   @keyframes shake {
+
+       0%,
+       100% {
+           transform: translateX(0);
+       }
+
+       25% {
+           transform: translateX(-5px);
+       }
+
+       75% {
+           transform: translateX(5px);
+       }
+   }
+
+   @media (max-width: 768px) {
+       .header-section h1 {
+           font-size: 2rem;
+       }
+
+       .bookmark-actions {
+           width: 100%;
+           margin-top: 1rem;
+       }
+
+       .bookmark-actions .btn {
+           flex: 1;
+       }
+   }

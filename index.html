@@ -13,54 +13,35 @@
 
 <body>
 
-    <header>
-        <div class="container py-5">
-            <h3>
-                Bookmarker
-            </h3>
+    <div class="container">
+        <div class="header-section">
+            <h1>📚 Bookmarker</h1>
+            <p>Save and organize your favorite websites</p>
         </div>
-    </header>
 
-    <section class="inputs">
-        <div class="container">
-            <div class="check">
-
-                <div class="flex-column">
-
-                    <h2>Bookmark your favorite sites</h2>
-                    <p>Site Name</p>
-                    <input id="siteName" placeholder="Bookmark Name" type="text">
-                    <p class="alert alert-error m-auto my-2" style="display: block;" id="nameError">Name is required</p>
-                    <p class="pt-3">Site URL</p>
-
-                    <input id="siteUrl" placeholder="website URL" type="text">
-
-                    <p class="alert alert-error m-auto my-2" style="display: block;" id="urlError">Url Field is required
-                    </p>
-                    <div class="m-auto py-4">
-                        <button class="btn btn-primary" onclick="submit()">Submit</button>
-                    </div>
-                </div>
-
+        <div class="input-card p-4 p-md-5 mb-4">
+            <div class="mb-3">
+                <label for="siteName" class="form-label">Site Name</label>
+                <input type="text" class="form-control" id="siteName" placeholder="e.g., Google, GitHub, YouTube">
+                <div class="error-message" id="nameError">⚠️ Please enter a site name</div>
             </div>
-        </div>
 
-    </section>
-    <section class="out">
-
-        <div class="container">
-            <div id="bookmarkList" class="sites-list flex-column"> 
-                
+            <div class="mb-3">
+                <label for="siteUrl" class="form-label">Site URL</label>
+                <input type="text" class="form-control" id="siteUrl"
+                    placeholder="e.g., google.com or https://google.com">
+                <div class="error-message" id="urlError">⚠️ Please enter a valid URL</div>
             </div>
+
+            <button class="btn btn-submit w-100" onclick="submit()">Add Bookmark</button>
         </div>
 
-    </section>
+        <div id="bookmarkList"></div>
 
-    <footer>
-        <div class="container">
-            <p>© 2019 Bookmarker Inc.</p>
-        </div>
-    </footer>
+        <footer>
+            <p>© 2025 Bookmarker • Made with ❤️</p>
+        </footer>
+    </div>
 
     <script src="JS/main.js"></script>
 </body>
